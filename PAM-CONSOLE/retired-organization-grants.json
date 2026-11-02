@@ -1,0 +1,125 @@
+[
+  {
+    "createTime": "2026-10-30T18:56:33.511238769Z",
+    "justification": {
+      "unstructuredJustification": "test"
+    },
+    "name": "organizations/470598084059/locations/global/entitlements/console-project-vm-admin/grants/685f84ff-437f-4915-b7cc-6208173a517c",
+    "privilegedAccess": {
+      "gcpIamAccess": {
+        "resource": "//cloudresourcemanager.googleapis.com/projects/smanley-test-pam-lab-01",
+        "resourceType": "cloudresourcemanager.googleapis.com/Project",
+        "roleBindings": [
+          {
+            "role": "roles/resourcemanager.projectCreator"
+          },
+          {
+            "role": "roles/compute.instanceAdmin.v1"
+          },
+          {
+            "role": "roles/serviceusage.serviceUsageAdmin"
+          }
+        ]
+      }
+    },
+    "requestedDuration": "3600s",
+    "requester": "smanley-adm@trekai.org",
+    "state": "ACTIVATION_FAILED",
+    "timeline": {
+      "events": [
+        {
+          "eventTime": "2026-10-30T18:56:33.559830954Z",
+          "requested": {
+            "expireTime": "2026-10-31T18:56:33.559830954Z"
+          }
+        },
+        {
+          "approved": {
+            "actor": "smanley@trekai.org",
+            "reason": "approved"
+          },
+          "eventTime": "2026-10-30T18:57:01.407946999Z"
+        },
+        {
+          "eventTime": "2026-10-30T18:57:01.407995364Z",
+          "scheduled": {
+            "scheduledActivationTime": "2026-10-30T18:57:01.407995364Z"
+          }
+        },
+        {
+          "activationFailed": {
+            "error": {
+              "code": 400,
+              "message": "Role roles/resourcemanager.projectCreator is not supported for this resource."
+            }
+          },
+          "eventTime": "2026-10-30T18:57:02.449606957Z"
+        }
+      ]
+    },
+    "updateTime": "2026-10-30T18:57:02.515040Z"
+  },
+  {
+    "auditTrail": {
+      "accessGrantTime": "2026-10-30T17:26:45.652489061Z",
+      "accessRemoveTime": "2026-10-30T18:26:44.939602588Z"
+    },
+    "createTime": "2026-10-30T17:26:24.974438221Z",
+    "justification": {
+      "unstructuredJustification": "Provision a Google Cloud project and VM in trekai.org using the user-requested PAM console access workflow."
+    },
+    "name": "organizations/470598084059/locations/global/entitlements/console-project-vm-admin/grants/da540b2c-740e-49a5-86a4-738840705add",
+    "privilegedAccess": {
+      "gcpIamAccess": {
+        "resource": "//cloudresourcemanager.googleapis.com/organizations/470598084059",
+        "resourceType": "cloudresourcemanager.googleapis.com/Organization",
+        "roleBindings": [
+          {
+            "role": "roles/resourcemanager.projectCreator"
+          },
+          {
+            "role": "roles/compute.instanceAdmin.v1"
+          },
+          {
+            "role": "roles/serviceusage.serviceUsageAdmin"
+          }
+        ]
+      }
+    },
+    "requestedDuration": "3600s",
+    "requester": "smanley-adm@trekai.org",
+    "state": "ENDED",
+    "timeline": {
+      "events": [
+        {
+          "eventTime": "2026-10-30T17:26:25.015710413Z",
+          "requested": {
+            "expireTime": "2026-10-31T17:26:25.015710413Z"
+          }
+        },
+        {
+          "approved": {
+            "actor": "smanley@trekai.org",
+            "reason": "Approved user-requested one-hour project and VM provisioning access in trekai.org."
+          },
+          "eventTime": "2026-10-30T17:26:44.280410954Z"
+        },
+        {
+          "eventTime": "2026-10-30T17:26:44.280449405Z",
+          "scheduled": {
+            "scheduledActivationTime": "2026-10-30T17:26:44.280449405Z"
+          }
+        },
+        {
+          "activated": {},
+          "eventTime": "2026-10-30T17:26:45.652489061Z"
+        },
+        {
+          "ended": {},
+          "eventTime": "2026-10-30T18:26:44.939602588Z"
+        }
+      ]
+    },
+    "updateTime": "2026-10-30T18:26:45.024866Z"
+  }
+]

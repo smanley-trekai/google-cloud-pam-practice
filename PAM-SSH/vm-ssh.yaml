@@ -1,0 +1,24 @@
+privilegedAccess:
+  gcpIamAccess:
+    resourceType: cloudresourcemanager.googleapis.com/Project
+    resource: //cloudresourcemanager.googleapis.com/projects/qa-virtual-machine
+    roleBindings:
+    - role: roles/compute.osLogin
+      conditionExpression: resource.name == "projects/qa-virtual-machine/zones/us-central1-a/instances/instance-20261030-190831"
+    - role: roles/iap.tunnelResourceAccessor
+      conditionExpression: destination.ip == "10.128.0.2" && destination.port == 22
+    - role: roles/compute.viewer
+maxRequestDuration: 86400s
+eligibleUsers:
+- principals:
+  - user:contractor-ait-aravinds@trekai.org
+approvalWorkflow:
+  manualApprovals:
+    requireApproverJustification: true
+    steps:
+    - approvalsNeeded: 1
+      approvers:
+      - principals:
+        - user:smanley@trekai.org
+requesterJustificationConfig:
+  unstructured: {}

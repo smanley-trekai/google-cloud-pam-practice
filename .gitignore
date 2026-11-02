@@ -4,3 +4,12 @@
 terraform.tfvars
 crash.log
 __pycache__/
+.DS_Store
+
+# Local environment configuration; keep example templates in Git.
+.env
+.env.*
+*.env
+*.env.*
+!.env.example
+!*.env.example

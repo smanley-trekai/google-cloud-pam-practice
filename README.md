@@ -6,6 +6,8 @@ time-limited **grant** when they need one, with approval where it matters.
 
 New to PAM? Start with [HOW-PAM-WORKS.md](HOW-PAM-WORKS.md), a beginner's guide with diagrams.
 To try it hands-on in a throwaway project, follow [TRY-PAM.md](TRY-PAM.md).
+For temporary employee SSH access with requests and approvals, follow [PAM-SSH/README.md](PAM-SSH/README.md).
+For CLI setup with impersonation and temporary console access to create projects and VMs, see [PAM-CONSOLE-ADMIN-ACCESS.md](PAM-CONSOLE-ADMIN-ACCESS.md).
 To post requests and approvals to Slack, see [SLACK-NOTIFICATIONS.md](SLACK-NOTIFICATIONS.md).
 
 - **Entitlements** (who can get which roles, for how long, who approves) are managed here in Terraform.

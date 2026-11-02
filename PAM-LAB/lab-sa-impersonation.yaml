@@ -1,0 +1,20 @@
+privilegedAccess:
+  gcpIamAccess:
+    resourceType: cloudresourcemanager.googleapis.com/Project
+    resource: //cloudresourcemanager.googleapis.com/projects/smanley-test-pam-lab-01
+    roleBindings:
+    - role: roles/iam.serviceAccountTokenCreator
+maxRequestDuration: 3600s
+eligibleUsers:
+- principals:
+  - user:smanley-adm@trekai.org
+approvalWorkflow:
+  manualApprovals:
+    requireApproverJustification: true
+    steps:
+    - approvalsNeeded: 1
+      approvers:
+      - principals:
+        - user:smanley@trekai.org
+requesterJustificationConfig:
+  unstructured: {}

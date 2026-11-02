@@ -1,0 +1,12 @@
+privilegedAccess:
+  gcpIamAccess:
+    resourceType: cloudresourcemanager.googleapis.com/Project
+    resource: //cloudresourcemanager.googleapis.com/projects/smanley-test-pam-lab-01
+    roleBindings:
+    - role: roles/storage.objectViewer
+maxRequestDuration: 3600s
+eligibleUsers:
+- principals:
+  - user:smanley-adm@trekai.org
+requesterJustificationConfig:
+  unstructured: {}

@@ -1,0 +1,22 @@
+privilegedAccess:
+  gcpIamAccess:
+    resourceType: cloudresourcemanager.googleapis.com/Folder
+    resource: //cloudresourcemanager.googleapis.com/folders/653186815477
+    roleBindings:
+    - role: roles/resourcemanager.projectCreator
+    - role: roles/compute.instanceAdmin.v1
+    - role: roles/serviceusage.serviceUsageAdmin
+maxRequestDuration: 3600s
+eligibleUsers:
+- principals:
+  - user:smanley-adm@trekai.org
+approvalWorkflow:
+  manualApprovals:
+    requireApproverJustification: true
+    steps:
+    - approvalsNeeded: 1
+      approvers:
+      - principals:
+        - user:smanley@trekai.org
+requesterJustificationConfig:
+  unstructured: {}
